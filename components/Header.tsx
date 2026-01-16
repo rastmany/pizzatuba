@@ -31,7 +31,7 @@ const Header: React.FC<HeaderProps> = ({
             </div>
             <div className="hidden sm:block">
               <h1 className="text-xl font-black uppercase tracking-tighter text-[#181818] leading-none">Pizzatuba</h1>
-              <span className="text-[10px] text-gray-400 font-bold uppercase tracking-widest">Tartu • Eesti</span>
+              <span className="text-[10px] text-gray-400 font-bold uppercase tracking-widest">Abja-Paluoja • Eesti</span>
             </div>
           </div>
 

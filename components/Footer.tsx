@@ -19,7 +19,7 @@ const Footer: React.FC = () => {
               <h2 className="text-xl font-black uppercase tracking-tighter text-[#181818]">Pizzatuba</h2>
             </div>
             <p className="text-[#5C6370] text-sm leading-relaxed">
-              Pizzatuba on Tartu autentne pitsakogemus, kus traditsiooniline käsitöö kohtub modernse maitsega. Kasutame vaid parimat toorainet.
+              Pizzatuba on Abja-Paluoja autentne pitsakogemus, kus traditsiooniline käsitöö kohtub modernse maitsega. Kasutame vaid parimat toorainet.
             </p>
             <div className="flex gap-4">
               <a href="#" className="w-10 h-10 bg-[#F3F3F7] rounded-full flex items-center justify-center text-[#181818] hover:bg-[#FF6900] hover:text-white transition-all">
@@ -67,12 +67,12 @@ const Footer: React.FC = () => {
               </li>
               <li className="flex gap-3">
                 <MapPin size={18} className="text-[#FF6900] flex-shrink-0" />
-                <span className="text-[#5C6370]">Turu 2, Tartu, 51013 Eesti</span>
+                <span className="text-[#5C6370]">Pärnu mnt 2, Abja-Paluoja, 69402 Eesti</span>
               </li>
             </ul>
             <div className="pt-2">
-               {/* Button component is used here */}
-               <Button variant="outline" className="w-full">Broneeri laud</Button>
+              {/* Button component is used here */}
+              <Button variant="outline" className="w-full">Broneeri laud</Button>
             </div>
           </div>
         </div>

@@ -6,7 +6,7 @@ export const MENU_ITEMS: Product[] = [
   {
     id: 'p1',
     name: 'Margherita',
-    description: 'Pitsakaste, burrata mozzarella, kirsstomat, basiilik, parmesan ja oliivõli',
+    description: 'Klassikaline Itaalia pitsa kreemise burrata, värskete kirsstomatite ja aromaatse basiilikuga',
     price: 10,
     category: Category.PIZZAS,
     imageUrl: 'https://images.unsplash.com/photo-1574071318508-1cdbad80ad38?auto=format&fit=crop&q=80&w=600',
@@ -15,7 +15,7 @@ export const MENU_ITEMS: Product[] = [
   {
     id: 'p2',
     name: 'Verdure',
-    description: 'Pitsakaste, seened, paprika, punane sibul, mustad oliivid ja riivitud mozzarella',
+    description: 'Rikkalt köögivilju: seened, paprika, punane sibul ja mustad oliivid krõbedal täisterajahust põhjal',
     price: 10,
     category: Category.PIZZAS,
     imageUrl: 'https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&q=80&w=600',
@@ -24,7 +24,7 @@ export const MENU_ITEMS: Product[] = [
   {
     id: 'p3',
     name: 'Caprese',
-    description: 'Pitsakaste, riivitud mozzarella, sibul, kapparid, rukola ja oliivid',
+    description: 'Kerge ja värske - mozzarella, kapparid, rukola ja aromaatsed oliivid',
     price: 10,
     category: Category.PIZZAS,
     imageUrl: 'https://images.unsplash.com/photo-1593560708920-61dd98c46a4e?auto=format&fit=crop&q=80&w=600',
@@ -33,7 +33,7 @@ export const MENU_ITEMS: Product[] = [
   {
     id: 'p4',
     name: 'Cheesy',
-    description: 'Pitsakaste, riivitud mozarella, parmesan ja burrata mozarella',
+    description: 'Juustuarmastaja unistus - kolm juusti: mozzarella, parmesan ja kreemjas burrata',
     price: 10,
     category: Category.PIZZAS,
     imageUrl: 'https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&q=80&w=600',
@@ -42,7 +42,7 @@ export const MENU_ITEMS: Product[] = [
   {
     id: 'p5',
     name: 'Sink & Juust',
-    description: 'Pitsakaste, riivitud mozzarella, parmesan ja sink',
+    description: 'Ajatu klassika - kvaliteetne sink sulanud mozzarella ja parmesaniga',
     price: 10,
     category: Category.PIZZAS,
     imageUrl: 'https://images.unsplash.com/photo-1595854341625-f33ee10dbf94?auto=format&fit=crop&q=80&w=600',
@@ -50,7 +50,7 @@ export const MENU_ITEMS: Product[] = [
   {
     id: 'p6',
     name: 'Pepperoni',
-    description: 'Pitsakaste, riivitud mozzarella ja ohtralt pepperoni viile',
+    description: 'Populaarseim valik - ohtralt vürtsikaid pepperoni viilud krõbedal põhjal',
     price: 10,
     category: Category.PIZZAS,
     imageUrl: 'https://images.unsplash.com/photo-1628840042765-356cda07504e?auto=format&fit=crop&q=80&w=600',
@@ -59,7 +59,7 @@ export const MENU_ITEMS: Product[] = [
   {
     id: 'p7',
     name: 'Salami',
-    description: 'Pitsakaste, riivitud mozzarella, paprika, oliivid ja salaami',
+    description: 'Mahlane salaami koos paprika, oliivide ja sulanud juustuga',
     price: 10,
     category: Category.PIZZAS,
     imageUrl: 'https://images.unsplash.com/photo-1534308983496-4fabb1a015ee?auto=format&fit=crop&q=80&w=600',
@@ -67,7 +67,7 @@ export const MENU_ITEMS: Product[] = [
   {
     id: 'p8',
     name: 'Hawaiian',
-    description: 'Pitsakaste, riivitud mozzarella, ananass, jalapeño ja sink',
+    description: 'Eksootiliste maitsete segu - magus ananass, vürtsikas jalapeño ja sink',
     price: 10,
     category: Category.PIZZAS,
     imageUrl: 'https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&q=80&w=600',
@@ -75,7 +75,7 @@ export const MENU_ITEMS: Product[] = [
   {
     id: 'p9',
     name: 'Peekoni',
-    description: 'Pitsakaste, riivitud mozzarella, sibul, küüslauk, seened ja peekon',
+    description: 'Maitsev kombinatsioon peekonist, seentest ja aromaatsest küüslaugust',
     price: 10,
     category: Category.PIZZAS,
     imageUrl: 'https://images.unsplash.com/photo-1541745537411-b8046dc6d66c?auto=format&fit=crop&q=80&w=600',
@@ -83,17 +83,34 @@ export const MENU_ITEMS: Product[] = [
   {
     id: 'p10',
     name: 'Tonno',
-    description: 'Pitsakaste, riivitud mozarella, sibul, küüslauk ja tuunikala',
+    description: 'Mereliste maitsete kogemus - kvaliteetne tuunikala koos küüslaugu ja sibulatega',
     price: 10,
     category: Category.PIZZAS,
     imageUrl: 'https://images.unsplash.com/photo-1594007654729-407eedc4be65?auto=format&fit=crop&q=80&w=600',
+  },
+  {
+    id: 'p11',
+    name: 'Vendetta',
+    description: 'Värviline maitsesümfoonia - kirsstomatid, paprika, sibul ja krõbe salaami',
+    price: 10,
+    category: Category.PIZZAS,
+    imageUrl: 'https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&q=80&w=600',
+    isNew: true,
+  },
+  {
+    id: 'p12',
+    name: 'Kananass',
+    description: 'Harmooniline maitse - maitsestatud kana, magus ananass ja värskendav paprika',
+    price: 10,
+    category: Category.PIZZAS,
+    imageUrl: 'https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&q=80&w=600',
   },
 
   // SPECIALS
   {
     id: 's1',
     name: 'Little John',
-    description: 'Pitsakaste, riivitud mozzarella, küüslauk, oliivid, kapparid, paprika, pepperoni ja salaami',
+    description: 'Maitseküllane valik - pepperoni, salaami, oliivid, kapparid ja küüslauk ühel pitsal',
     price: 12,
     category: Category.SPECIALS,
     imageUrl: 'https://images.unsplash.com/photo-1571407970349-bc81e7e96d47?auto=format&fit=crop&q=80&w=600',
@@ -101,7 +118,7 @@ export const MENU_ITEMS: Product[] = [
   {
     id: 's2',
     name: 'Kana ja Peekon',
-    description: 'Pitsakaste, riivitud mozzarella, küüslauk, seened, jalopeño, peekon ja maitsestatud kana',
+    description: 'Täidetud maitsega - maitsestatud kana, krõbe peekon, seened ja vürtsikas jalapeño',
     price: 12,
     category: Category.SPECIALS,
     imageUrl: 'https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&q=80&w=600',
@@ -109,7 +126,7 @@ export const MENU_ITEMS: Product[] = [
   {
     id: 's3',
     name: 'Barbara',
-    description: 'Piimakreem, riivitud mozzarella, burrata mozzarella, pistaatsi pähkli puru, mortadella ja basiilik',
+    description: 'Gourmet-valik - kreemjas burrata, õrn mortadella, pistaatsia puruke ja värske basiilik',
     price: 12,
     category: Category.SPECIALS,
     imageUrl: 'https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&q=80&w=600',
@@ -118,7 +135,7 @@ export const MENU_ITEMS: Product[] = [
   {
     id: 's4',
     name: 'Diavola',
-    description: 'Pitsakaste, riivitud mozzarella, sibul, küüslauk, tšilli ja vürtsikas salaami',
+    description: 'Tuliselt vürtsikas - põletav salaami, tšilli ja küüslauk teravate maitsete sõpradele',
     price: 12,
     category: Category.SPECIALS,
     imageUrl: 'https://images.unsplash.com/photo-1605478336952-4582ba9b8770?auto=format&fit=crop&q=80&w=600',
@@ -126,7 +143,7 @@ export const MENU_ITEMS: Product[] = [
   {
     id: 's5',
     name: 'Carbonara',
-    description: 'Pitsakaste, riivitud mozzarella, sibul, küüslauk, muna ja peekon',
+    description: 'Itaalia klassika pitsa kujul - peekon, muna, küüslauk ja kreemjas juust',
     price: 12,
     category: Category.SPECIALS,
     imageUrl: 'https://images.unsplash.com/photo-1541745537411-b8046dc6d66c?auto=format&fit=crop&q=80&w=600',
@@ -134,7 +151,7 @@ export const MENU_ITEMS: Product[] = [
   {
     id: 's6',
     name: 'Nelja Liha',
-    description: 'Pitsakaste, riivitud mozzarella, veisehakkliha, pepperoni, salaami ja peekon',
+    description: 'Lihameelsete eelistus - pepperoni, salaami, peekon ja veisehakkliha',
     price: 12,
     category: Category.SPECIALS,
     imageUrl: 'https://images.unsplash.com/photo-1594007654729-407eedc4be65?auto=format&fit=crop&q=80&w=600',
@@ -142,7 +159,7 @@ export const MENU_ITEMS: Product[] = [
   {
     id: 's7',
     name: 'BBQ',
-    description: 'Pitsakaste, riivitud mozzarella, punane sibul, kurk, BBQ kaste ja rebitud sealiha',
+    description: 'Suitsumaitseline nauding - rebitud sealiha, BBQ kaste, punane sibul ja krõbedad kurgid',
     price: 12,
     category: Category.SPECIALS,
     imageUrl: 'https://images.unsplash.com/photo-1561350111-7dad5b13d822?auto=format&fit=crop&q=80&w=600',
@@ -150,7 +167,7 @@ export const MENU_ITEMS: Product[] = [
   {
     id: 's8',
     name: 'Kebabi',
-    description: 'Pitsakaste, riivitud mozzarella, sibul, kurk, küüslaugu kaste ja kanakebab',
+    description: 'Orientaalne maitse - kanakebab, küüslaugukaste, värske kurk ja sibul',
     price: 12,
     category: Category.SPECIALS,
     imageUrl: 'https://images.unsplash.com/photo-1574129810554-a69bbda98433?auto=format&fit=crop&q=80&w=600',
@@ -158,7 +175,7 @@ export const MENU_ITEMS: Product[] = [
   {
     id: 's9',
     name: 'Laste',
-    description: 'Pitsakaste, riivitud mozzarella ja viinerid',
+    description: 'Lapsesõbralik valik - viinerid sulanud juustuga lihtsa ja hea maitsega',
     price: 8,
     category: Category.SPECIALS,
     imageUrl: 'https://images.unsplash.com/photo-1565299507177-b0ac0f717f28?auto=format&fit=crop&q=80&w=600',
@@ -194,7 +211,7 @@ export const MENU_ITEMS: Product[] = [
   {
     id: 'a1',
     name: 'Küüslaugukaste',
-    description: 'Maitseküllane küüslaugudipp',
+    description: 'Kodune kreemjas küüslaugudip - täiuslik pitsakaaslane',
     price: 2,
     category: Category.ADDONS,
     imageUrl: 'https://images.unsplash.com/photo-1571167530349-83805c9360bb?auto=format&fit=crop&q=80&w=600',
@@ -202,7 +219,7 @@ export const MENU_ITEMS: Product[] = [
   {
     id: 'a2',
     name: 'Maitserohelise dipp',
-    description: 'Värske ürdidipp',
+    description: 'Värskete ürtide kasteke - kerge ja aromaatne',
     price: 2,
     category: Category.ADDONS,
     imageUrl: 'https://images.unsplash.com/photo-1571167530349-83805c9360bb?auto=format&fit=crop&q=80&w=600',
@@ -251,7 +268,7 @@ export const OPERATING_HOURS = [
 ];
 
 export const STORIES = [
-  { id: 1, title: 'Uus Barbara', image: 'https://images.unsplash.com/photo-1593560708920-61dd98c46a4e?auto=format&fit=crop&q=80&w=200', color: 'bg-orange-100' },
+  { id: 1, title: 'Uus Maitse', image: 'https://images.unsplash.com/photo-1593560708920-61dd98c46a4e?auto=format&fit=crop&q=80&w=200', color: 'bg-orange-100' },
   { id: 2, title: 'Kampaaniad', image: 'https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&q=80&w=200', color: 'bg-blue-100' },
   { id: 3, title: 'Lõunadiil', image: 'https://images.unsplash.com/photo-1594007654729-407eedc4be65?auto=format&fit=crop&q=80&w=200', color: 'bg-green-100' },
   { id: 4, title: 'Pizzatuba', image: 'https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&q=80&w=200', color: 'bg-yellow-100' },

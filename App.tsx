@@ -96,7 +96,7 @@ const App: React.FC = () => {
                 transition={{ delay: 0.5, duration: 0.6 }}
                 className="text-5xl md:text-7xl font-black text-white mb-4"
               >
-                Pitsa, mis on <br /><span className="text-[#FF6900]">Tartu parim.</span>
+                Pitsa, mis on <br /><span className="text-[#FF6900]">Mulgimaa parim.</span>
               </motion.h1>
               <motion.p
                 initial={{ x: -20, opacity: 0 }}
