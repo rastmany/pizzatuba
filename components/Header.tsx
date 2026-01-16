@@ -73,7 +73,6 @@ const Header: React.FC<HeaderProps> = ({
             </motion.div>
           )}
         </AnimatePresence>
-      </div>
 
       {/* Right: User & Cart */}
       <div className="flex items-center gap-2 md:gap-4">
@@ -104,7 +103,7 @@ const Header: React.FC<HeaderProps> = ({
         </Button>
       </div>
     </div>
-    </header >
+    </header>
   );
 };
 
