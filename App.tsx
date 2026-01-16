@@ -4,6 +4,7 @@ import { motion, AnimatePresence, LayoutGroup } from 'framer-motion';
 import { ShoppingBag } from 'lucide-react';
 import { Category, Product, CartItem } from './types';
 import { MENU_ITEMS } from './constants';
+import { useScrollNavigation } from './hooks/useScrollNavigation';
 import Header from './components/Header';
 import StickyNav from './components/StickyNav';
 import ProductCard from './components/ProductCard';
@@ -15,12 +16,13 @@ const App: React.FC = () => {
   const [activeCategory, setActiveCategory] = useState<Category>(Category.PIZZAS);
   const [cartItems, setCartItems] = useState<CartItem[]>([]);
   const [isCartOpen, setIsCartOpen] = useState(false);
+  const { isCompactMode } = useScrollNavigation();
 
   const addToCart = (product: Product) => {
     setCartItems(prev => {
       const existing = prev.find(item => item.id === product.id);
       if (existing) {
-        return prev.map(item => 
+        return prev.map(item =>
           item.id === product.id ? { ...item, quantity: item.quantity + 1 } : item
         );
       }
@@ -32,7 +34,7 @@ const App: React.FC = () => {
     setCartItems(prev => {
       const existing = prev.find(item => item.id === id);
       if (existing && existing.quantity > 1) {
-        return prev.map(item => 
+        return prev.map(item =>
           item.id === id ? { ...item, quantity: item.quantity - 1 } : item
         );
       }
@@ -53,7 +55,7 @@ const App: React.FC = () => {
     setActiveCategory(category);
     const element = document.getElementById(category);
     if (element) {
-      const offset = 140; 
+      const offset = 140;
       const elementPosition = element.getBoundingClientRect().top + window.pageYOffset - offset;
       window.scrollTo({ top: elementPosition, behavior: 'smooth' });
     }
@@ -64,19 +66,23 @@ const App: React.FC = () => {
 
   return (
     <LayoutGroup>
-      <motion.div 
+      <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.5 }}
         className="min-h-screen flex flex-col bg-[#F3F3F7]"
       >
-        <Header cartCount={cartCount} onOpenCart={() => setIsCartOpen(true)} />
-        
-        <main className="container mx-auto px-4 py-8 flex-grow">
-          <Stories />
+        <Header
+          cartCount={cartCount}
+          onOpenCart={() => setIsCartOpen(true)}
+          isCompactMode={isCompactMode}
+          activeCategory={activeCategory}
+          onCategoryClick={handleCategoryChange}
+        />
 
+        <main className="container mx-auto px-4 py-8 flex-grow">
           {/* Hero Section with Parallax-like entrance */}
-          <motion.section 
+          <motion.section
             initial={{ y: 30, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ delay: 0.2, duration: 0.8, ease: "easeOut" }}
@@ -84,15 +90,15 @@ const App: React.FC = () => {
           >
             <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&q=80&w=1600" className="absolute inset-0 w-full h-full object-cover" />
             <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent p-12 flex flex-col justify-end">
-              <motion.h1 
+              <motion.h1
                 initial={{ x: -20, opacity: 0 }}
                 animate={{ x: 0, opacity: 1 }}
                 transition={{ delay: 0.5, duration: 0.6 }}
                 className="text-5xl md:text-7xl font-black text-white mb-4"
               >
-                Pitsa, mis on <br/><span className="text-[#FF6900]">Tartu parim.</span>
+                Pitsa, mis on <br /><span className="text-[#FF6900]">Tartu parim.</span>
               </motion.h1>
-              <motion.p 
+              <motion.p
                 initial={{ x: -20, opacity: 0 }}
                 animate={{ x: 0, opacity: 1 }}
                 transition={{ delay: 0.7, duration: 0.6 }}
@@ -103,16 +109,20 @@ const App: React.FC = () => {
             </div>
           </motion.section>
 
-          <StickyNav 
-            activeCategory={activeCategory} 
-            onCategoryClick={handleCategoryChange} 
+          <Stories />
+
+          <StickyNav
+            id="sticky-nav"
+            activeCategory={activeCategory}
+            onCategoryClick={handleCategoryChange}
+            isCompactMode={isCompactMode}
           />
 
           <div className="space-y-24 mt-12">
             {Object.values(Category).map((cat, index) => (
-              <motion.section 
-                key={cat} 
-                id={cat} 
+              <motion.section
+                key={cat}
+                id={cat}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-100px" }}
@@ -124,11 +134,11 @@ const App: React.FC = () => {
                 </h2>
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
                   {MENU_ITEMS.filter(item => item.category === cat).map((item) => (
-                    <ProductCard 
-                      key={item.id} 
-                      product={item} 
+                    <ProductCard
+                      key={item.id}
+                      product={item}
                       quantity={cartItems.find(i => i.id === item.id)?.quantity || 0}
-                      onAdd={addToCart} 
+                      onAdd={addToCart}
                       onRemove={removeFromCart}
                     />
                   ))}
@@ -156,7 +166,7 @@ const App: React.FC = () => {
               <span>Vaata tellimust</span>
               <div className="h-5 w-[1px] bg-white/30 mx-1"></div>
               <span className="text-sm">{cartTotal.toFixed(2)}€</span>
-              <motion.div 
+              <motion.div
                 className="absolute inset-0 bg-white/10"
                 initial={{ x: '-100%' }}
                 whileHover={{ x: '100%' }}
@@ -166,9 +176,9 @@ const App: React.FC = () => {
           )}
         </AnimatePresence>
 
-        <CartSidebar 
-          isOpen={isCartOpen} 
-          onClose={() => setIsCartOpen(false)} 
+        <CartSidebar
+          isOpen={isCartOpen}
+          onClose={() => setIsCartOpen(false)}
           items={cartItems}
           onUpdateQuantity={updateQuantity}
           onRemove={removeFromCart}
