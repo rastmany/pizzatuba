@@ -24,7 +24,7 @@ const Header: React.FC<HeaderProps> = ({
     <header className="sticky top-0 z-50 w-full bg-white/90 backdrop-blur-md shadow-sm">
       <div className="container mx-auto px-4 h-16 md:h-20 flex items-center justify-between">
         {/* Left: Brand Logo & Delivery */}
-        <div className="flex items-center gap-4 md:gap-12">
+        <div className="flex items-center gap-2 md:gap-6">
           <div className="flex items-center gap-2 cursor-pointer">
             <div className="w-10 h-10 bg-[#FF6900] rounded-full flex items-center justify-center">
               <span className="text-white font-black text-xl italic">P</span>
@@ -41,9 +41,9 @@ const Header: React.FC<HeaderProps> = ({
             </div>
             <div>
               <div className="font-extrabold flex items-center gap-1">
-                Kättetoimetamine <ChevronDown size={14} />
+                Ette tellimine <ChevronDown size={14} />
               </div>
-              <div className="text-xs text-[#5C6370]">30–45 min • 4.5 ★</div>
+              <div className="text-xs text-[#5C6370]">15–20 min • 4.5 ★</div>
             </div>
           </div>
         </div>
@@ -74,35 +74,35 @@ const Header: React.FC<HeaderProps> = ({
           )}
         </AnimatePresence>
 
-      {/* Right: User & Cart */}
-      <div className="flex items-center gap-2 md:gap-4">
-        <div className="hidden sm:flex items-center gap-4 mr-4 text-sm font-bold text-[#5C6370]">
-          <a href="#" className="hover:text-[#FF6900]">Kampaaniad</a>
-          <a href="#" className="hover:text-[#FF6900]">Meist</a>
-        </div>
-
-        <button className="p-2.5 rounded-full bg-[#F3F3F7] text-[#5C6370] hover:bg-[#E2E2E9] transition-colors hidden md:block">
-          <User size={20} />
-        </button>
-
-        <Button
-          onClick={onOpenCart}
-          variant="primary"
-          className="gap-2 group !px-4 md:!px-6"
-        >
-          <span className="hidden md:inline">Ostukorv</span>
-          <div className="h-5 w-[1px] bg-white/30 hidden md:block mx-1"></div>
-          <div className="flex items-center gap-1.5">
-            <ShoppingCart size={18} />
-            {cartCount > 0 && (
-              <span className="bg-white text-[#FF6900] text-[10px] font-black px-1.5 py-0.5 rounded-full min-w-[1.25rem] flex items-center justify-center">
-                {cartCount}
-              </span>
-            )}
+        {/* Right: User & Cart */}
+        <div className="flex items-center gap-2 md:gap-4">
+          <div className="hidden sm:flex items-center gap-4 mr-4 text-sm font-bold text-[#5C6370]">
+            <a href="#" className="hover:text-[#FF6900]">Kampaaniad</a>
+            <a href="#" className="hover:text-[#FF6900]">Meist</a>
           </div>
-        </Button>
+
+          <button className="p-2.5 rounded-full bg-[#F3F3F7] text-[#5C6370] hover:bg-[#E2E2E9] transition-colors hidden md:block">
+            <User size={20} />
+          </button>
+
+          <Button
+            onClick={onOpenCart}
+            variant="primary"
+            className="gap-2 group !px-4 md:!px-6"
+          >
+            <span className="hidden md:inline">Ostukorv</span>
+            <div className="h-5 w-[1px] bg-white/30 hidden md:block mx-1"></div>
+            <div className="flex items-center gap-1.5">
+              <ShoppingCart size={18} />
+              {cartCount > 0 && (
+                <span className="bg-white text-[#FF6900] text-[10px] font-black px-1.5 py-0.5 rounded-full min-w-[1.25rem] flex items-center justify-center">
+                  {cartCount}
+                </span>
+              )}
+            </div>
+          </Button>
+        </div>
       </div>
-    </div>
     </header>
   );
 };

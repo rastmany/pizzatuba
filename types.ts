@@ -3,7 +3,7 @@ export enum Category {
   PIZZAS = 'Pitsad',
   SPECIALS = 'Eripakkumised',
   DRINKS = 'Joogid',
-  COMBOS = 'Kombo pakkumised',
+  COMBOS = 'Kombo',
   ADDONS = 'Lisandid'
 }
 
