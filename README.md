@@ -2,7 +2,7 @@
 
 A modern, animated pizza ordering web application built with React, TypeScript, and Framer Motion.
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/YOUR_USERNAME/pizzatuba)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/rastmany/pizzatuba)
 
 ## ✨ Features
 
@@ -23,7 +23,7 @@ A modern, animated pizza ordering web application built with React, TypeScript, 
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/YOUR_USERNAME/pizzatuba.git
+   git clone https://github.com/rastmany/pizzatuba.git
    cd pizzatuba
    ```
 
@@ -71,7 +71,7 @@ Click the "Deploy with Vercel" button above
    git init
    git add .
    git commit -m "Initial commit"
-   git remote add origin https://github.com/YOUR_USERNAME/pizzatuba.git
+   git remote add origin https://github.com/rastmany/pizzatuba.git
    git push -u origin main
    ```
 
